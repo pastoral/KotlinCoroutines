@@ -23,15 +23,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTask(){
-       val job = scope.launch {
-           var result = ""
+       scope.launch {
+           println("startTask: ${Thread.currentThread().name}")
            var time = measureTimeMillis {
-               println("startTask: ${Thread.currentThread().name}")
-                result = getDataNetwork()
+              val result:Deferred<String> = async {
+                  println("starting async job: ${Thread.currentThread().name}")
+                  getDataNetwork()
+              }
+               updateUI(result.await())
            }
            println("Elapsed Time: ${time}")
 
-            updateUI(result)
         }
     }
 
