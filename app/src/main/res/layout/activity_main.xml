@@ -7,6 +7,15 @@
     tools:context=".MainActivity"
     android:id="@+id/main_constraint">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Task#2"
+        app:layout_constraintStart_toStartOf="@+id/progressbar2"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar1" />
+
     <Button
         android:id="@+id/btn_job"
         android:layout_width="wrap_content"
@@ -49,9 +58,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:progressTint="@color/green"
-        android:indeterminateTintMode="@color/green"
+        android:layout_marginBottom="32dp"
         android:indeterminate="false"
+        android:indeterminateTintMode="@color/green"
+        android:progressTint="@color/purple"
+        app:layout_constraintBottom_toTopOf="@+id/progressbar2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_result" />
@@ -62,13 +73,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        android:progressTint="@color/orange"
-        android:indeterminateTintMode="@color/orange"
         android:indeterminate="false"
+        android:indeterminateTintMode="@color/orange"
+        android:progressTint="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressbar1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Task#1"
+        app:layout_constraintStart_toStartOf="@+id/progressbar1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

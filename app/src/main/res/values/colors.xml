@@ -5,4 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="green">#4CAF50</color>
     <color name="orange">#FF5722</color>
+    <color name="purple">#6D37CD</color>
+    <color name="red">#D6084E</color>
 </resources>
